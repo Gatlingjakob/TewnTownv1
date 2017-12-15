@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+<body>
+    <h1>Game Edit</h1>
+
+    <hr>
+
+    <a href="Index"><button>Archive</button></a>
+
+    <hr>
+    <form method="post" action="/Comic/Edit">
+        <p>ID</p>
+        <input type="number" required="required" name="ID" placeholder="number" />
+        <br><br>
+        <p>Imgurl</p>
+        <input type="text" required="required" name="Imgurl" placeholder="string" />
+        <br><br>
+        <p>Name</p>
+        <input type="text" required="required" name="Name" placeholder="string" />
+        <br><br>
+        <p>Date</p>
+        <input type="text" required="required" name="Date" placeholder="string" />
+        <br><br>
+        <input type="submit" />
+    </form>
+</body>
+</html>

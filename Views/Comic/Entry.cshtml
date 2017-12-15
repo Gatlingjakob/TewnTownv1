@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comic Entries</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/comicstyle.css">
+
+</head>
+<body>
+    <div class="container">
+        
+            <div class="banner">
+             <img src="https://i.imgur.com/BRXii71.png" alt="image" >
+        </div>
+
+        
+    @foreach(var stud in @ViewBag.stud)        
+        {
+            if(stud.ComicId == @ViewBag.number){
+                string x=@stud.Imgurl;
+                
+                  <img class= "content" src=@x alt="image " height="350" width="800" />
+              
+            }
+        }
+         <br>
+         <br>
+         <br>
+
+        
+        @{
+
+            int size = 12;
+             @foreach(var stud in @ViewBag.stud)        
+        {
+            size++;
+        }
+
+       int i = ViewBag.number;
+
+    
+        <button class="navButtons" type="button" onclick="location.href='13';"><<</button>
+
+        if(i !=13){
+        <button class="navButtons" type="button" onclick="location.href=@(i-1)">< </button>
+        }
+        else{
+            <button class="navButtons" type="button" onclick="location.href=@i">< </button>
+            }
+
+        if(i !=size){
+        <button class="navButtons" type="button" onclick="location.href=@(i+1)">></button>
+        }
+        else{
+            <button class="navButtons" type="button" onclick="location.href=@size;">></button>
+            }
+        
+        <button class="navButtons" type="button" onclick="location.href=@size;">>></button>
+       
+        }
+          <br>
+          <br>
+        
+       
+    </div>
+</body>
+</html>

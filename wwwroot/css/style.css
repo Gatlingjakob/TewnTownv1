@@ -1,0 +1,11 @@
+body { 
+    background-color: #BFB1B1;
+    width: 960px; margin: 0 auto; }
+
+    p{
+        color: rgba(110, 13, 26, 0.92);
+    }
+
+    th{
+        color: rgba(82, 10, 20, 0.92);
+    }
